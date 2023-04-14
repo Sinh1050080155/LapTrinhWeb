@@ -1,0 +1,50 @@
+﻿@model IEnumerable<QLTDL22.Models.tbPHONG>
+
+@{
+    ViewBag.Title = "ShowList";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+
+<h2>Danh sách phòng</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaLoaiPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KhachSan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gia1Ngay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CacTrangBiChoPhong)
+        </th>
+        <th>
+            @Html.ActionLink("Create New", "Create")
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaLoaiPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhachSan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gia1Ngay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CacTrangBiChoPhong)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.MaLoaiPhong }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MaLoaiPhong }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MaLoaiPhong })
+        </td>
+    </tr>
+}
+
+</table>

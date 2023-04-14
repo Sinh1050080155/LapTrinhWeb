@@ -1,0 +1,68 @@
+﻿@model IEnumerable<QLTDL22.Models.tbCHUYENDI>
+
+@{
+    ViewBag.Title = "ShowList";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+
+<h2>Danh sách chuyến đi</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaChuyen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaTuyen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayKhoiHanh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayKetThuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaLoaiPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaPhuongTien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TongTien)
+        </th>
+        <th>
+            @Html.ActionLink("Create New", "Create")
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaChuyen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaTuyen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayKhoiHanh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayKetThuc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaLoaiPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaPhuongTien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TongTien)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.MaChuyen }) |
+            @Html.ActionLink("Details", "Details", new {  id = item.MaChuyen }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MaChuyen })
+        </td>
+    </tr>
+}
+
+</table>

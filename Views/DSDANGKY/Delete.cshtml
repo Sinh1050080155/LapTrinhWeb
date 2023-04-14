@@ -1,0 +1,76 @@
+﻿@model QLTDL22.Models.tbDANGKY
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/Style.css">
+    <link rel="stylesheet" href="~/Content/TW2.css">
+</head>
+<h2 class="title">Bạn chắc chắn muốn xóa?</h2>
+<br/>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+       
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <p class="txt">Số đăng ký</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SoDangKy, new { htmlAttributes = new { @class = "form-control" , @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.SoDangKy, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p class="txt">Mã khách</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaKhach, new { htmlAttributes = new { @class = "form-control" , @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.MaKhach, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p class="txt">Mã chuyến</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaChuyen, new { htmlAttributes = new { @class = "form-control" , @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.MaChuyen, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p class="txt">Ngày đăng ký</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NgayDangKy, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.NgayDangKy, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p class="txt">Tiền đặt cọc</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TienDatCoc, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.TienDatCoc, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <p class="txt">Tiền trả lần 2</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TienTraLan2, new { htmlAttributes = new { @class = "form-control" , @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.TienTraLan2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Xóa" class="btn" />
+                @Html.ActionLink("Back to List", "ShowList", "", new { @class = "btn" })
+            </div>
+        </div>
+    </div>
+}

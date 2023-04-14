@@ -1,0 +1,67 @@
+﻿@model QLTDL22.Models.tbDANGKY
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+
+<h2>Chi tiêt đăng ký</h2>
+
+<div>
+    <h4>tbDANGKY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDangKy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDangKy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaKhach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaKhach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaChuyen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaChuyen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayDangKy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDangKy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TienDatCoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienDatCoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TienTraLan2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienTraLan2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SoDangKy }) |
+    @Html.ActionLink("Back to List", "ShowList")
+</p>

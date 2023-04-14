@@ -1,0 +1,51 @@
+﻿@model QLTDL22.Models.tbPHONG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+
+<h2>Chi tiết phòng</h2>
+
+<div>
+    <h4>tbPHONG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaLoaiPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLoaiPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KhachSan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachSan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia1Ngay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia1Ngay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CacTrangBiChoPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CacTrangBiChoPhong)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.MaLoaiPhong }) |
+    @Html.ActionLink("Back to List", "ShowList")
+</p>

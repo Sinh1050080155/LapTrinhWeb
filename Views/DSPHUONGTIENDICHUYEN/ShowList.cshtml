@@ -1,0 +1,50 @@
+﻿@model IEnumerable<QLTDL22.Models.tbPHUONGTIENDICHUYEN>
+
+@{
+    ViewBag.Title = "ShowList";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+
+<h2>Danh sách phương tiện di chuyển</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaPhuongTien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenPhuongTien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaTien1DonVi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </th>
+        <th>
+            @Html.ActionLink("Create New", "Create")
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaPhuongTien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenPhuongTien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaTien1DonVi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GhiChu)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.MaPhuongTien }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MaPhuongTien }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MaPhuongTien })
+        </td>
+    </tr>
+}
+
+</table>
