@@ -1,0 +1,62 @@
+﻿@model QLTDL22.Models.tbKHACH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/Style.css">
+    <link rel="stylesheet" href="~/Content/TW2.css">
+</head>
+<h2 class="title">Chi tiết khách hàng </h2>
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            <p class="txt">Mã khách</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.MaKhach)
+        </dt>
+
+        <dt>
+            <p class="txt">Tên khách hàng</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.TenKhachHang)
+        </dt>
+
+        <dt>
+            <p class="txt">Số CMND</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.SoCMND)
+        </dt>
+
+        <dt>
+            <p class="txt">Số điện thoại</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.SoDienThoai)
+        </dt>
+
+        <dt>
+            <p class="txt">Địa chỉ</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dt>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaKhach }, new { @class = "btn" })
+    @Html.ActionLink("Trở về", "ShowList", "", new { @class = "btn" })
+</p>

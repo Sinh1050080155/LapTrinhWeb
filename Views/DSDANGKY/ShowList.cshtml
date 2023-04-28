@@ -1,0 +1,43 @@
+﻿@model IEnumerable<QLTDL22.Models.tbDANGKY>
+
+@{
+    ViewBag.Title = "ShowList";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/Style.css">
+    <link rel="stylesheet" href="~/Content/TW2.css">
+</head>
+<h2 class="title">Danh sách đăng ký</h2>
+<table class="table">
+    <tr>
+        <th>Số đăng ký</th>
+        <th> Mã khách</th>
+        <th>Mã chuyến</th>
+        <th>Ngày đăng ký</th>
+        <th>Tiền đặt cọc</th>
+        <th>Tiền trả lần 2</th>
+        <th>
+            @Html.ActionLink("Thêm mới", "Create", "", new { @class = "btn1" })
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.SoDangKy)</td>
+            <td>@Html.DisplayFor(modelItem => item.MaKhach)</td>
+            <td>@Html.DisplayFor(modelItem => item.MaChuyen)</td>
+            <td>@String.Format("{0:dd-MM-yyyy}", item.NgayDangKy)</td>
+            <td> @Html.DisplayFor(modelItem => item.TienDatCoc)</td>
+            <td>@Html.DisplayFor(modelItem => item.TienTraLan2)</td>
+            <td class="td-btn">
+                @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.SoDangKy }, new { @class = "btn1" }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.SoDangKy }, new { @class = "btn1" }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.SoDangKy }, new { @class = "btn1" })
+            </td>
+        </tr>
+    }
+
+</table>

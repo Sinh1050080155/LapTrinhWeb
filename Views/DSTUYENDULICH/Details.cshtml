@@ -1,0 +1,46 @@
+﻿@model QLTDL22.Models.tbTUYENDULICH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/Style.css">
+    <link rel="stylesheet" href="~/Content/TW2.css">
+</head>
+<h2 class="title">Chi tiết tuyến du lịch </h2>
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            <p class="txt">Mã tuyến</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.MaTuyen)
+        </dt>
+
+        <dt>
+            <p class="txt">Tên tuyến</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.TenTuyen)
+        </dt>
+
+        <dt>
+            <p class="txt">Số ngày</p>
+        </dt>
+
+        <dt>
+            @String.Format("{0:dd-MM-yyyy}",Model.SoNgay)
+        </dt>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaTuyen }, new { @class = "btn" })
+    @Html.ActionLink("Trở về", "ShowList", "", new { @class = "btn" })
+</p>

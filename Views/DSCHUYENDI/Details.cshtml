@@ -1,0 +1,77 @@
+﻿@model QLTDL22.Models.tbCHUYENDI
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/Style.css">
+    <link rel="stylesheet" href="~/Content/TW2.css">
+</head>
+<h2 class="title">Chi tiết chuyến đi </h2>
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            <p class="txt">Mã chuyến</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.MaChuyen)
+        </dt>
+
+        <dt>
+            <p class="txt">Mã tuyến</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.MaTuyen)
+        </dt>
+
+        <dt>
+            <p class="txt">Ngày khởi hành</p>
+        </dt>
+
+        <dt>
+            @String.Format("{0:dd-MM-yyyy}", Model.NgayKhoiHanh)
+        </dt>
+
+        <dt>
+            <p class="txt">Ngày kết thúc</p>
+        </dt>
+
+        <dt>
+            @String.Format("{0:dd-MM-yyyy}", Model.NgayKetThuc)
+        </dt>
+
+        <dt>
+            <p class="txt">Mã loại phòng</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.MaLoaiPhong)
+        </dt>
+
+        <dt>
+            <p class="txt">Mã phương tiện</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.MaPhuongTien)
+        </dt>
+
+        <dt>
+            <p class="txt">Tổng tiền</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.TongTien)
+        </dt>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaChuyen  }, new { @class = "btn" }) 
+    @Html.ActionLink("Trở về", "ShowList", "", new { @class = "btn" })
+</p>

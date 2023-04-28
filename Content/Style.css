@@ -1,0 +1,83 @@
+﻿.txt {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 5px auto;
+}
+.form-control {
+    width: 450px;
+    height: 30px;
+    color: black;
+    /* border: 1px solid;*/
+    user-select: none;
+    /*outline:none;*/
+    border:1px solid;
+    border-radius: 3px;
+    /*border-left: 2px  solid;*/
+}
+.btn { 
+    background-color: #FFFFFF; 
+    border: 1px solid;
+    border-radius: 5px;
+    color: black;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 10px 5px;
+}
+.col-md-10 {
+    display:flex;
+    justify-content:center;
+}
+.text-danger{
+    color: red;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.title{
+    text-align:center;
+}
+.table {
+   
+    
+    min-width:100px;   
+    border-collapse: collapse; /* để cho border của các ô <td> nối với nhau */
+    border: 0px solid;
+    
+   
+}
+th {
+    
+    height:50px;
+    background-color: #FFFFFF;
+    /*border-radius: 3px;*/
+    /* border-bottom: 1px solid;*/
+    /*background-color: #dfdfe2;*/
+}
+td {
+    width: 150px;
+    /*min-width: 100px;*/
+    height: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+   
+}
+tr {
+   /* min-width: 150px;*/
+    
+}
+.btn1 {
+    color: blue;
+    text-decoration: none; /* Bỏ gạch chân */
+    
+}
+.td-btn{
+    width:170px;
+    
+}
+
+

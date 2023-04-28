@@ -1,0 +1,53 @@
+﻿@model QLTDL22.Models.tbPHONG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/Style.css">
+    <link rel="stylesheet" href="~/Content/TW2.css">
+</head>
+<h2 class="title">Chi tiết phòng </h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            <p class="txt">Mã loại phòng</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.MaLoaiPhong)
+        </dt>
+
+        <dt>
+            <p class="txt">Khách sạn</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.KhachSan)
+        </dt>
+
+        <dt>
+            <p class="txt">Giá 1 ngày</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.Gia1Ngay)
+        </dt>
+
+        <dt>
+            <p class="txt">Trang bị cho phòng</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.CacTrangBiChoPhong)
+        </dt>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaLoaiPhong }, new { @class = "btn" }) 
+    @Html.ActionLink("Trở về", "ShowList", "", new { @class = "btn" })
+</p>

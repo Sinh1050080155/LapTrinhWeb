@@ -1,0 +1,53 @@
+﻿@model QLTDL22.Models.tbPHUONGTIENDICHUYEN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Share/_LayoutUSE.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/Style.css">
+    <link rel="stylesheet" href="~/Content/TW2.css">
+</head>
+<h2 class="title">Chi tiết phương tiện </h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            <p class="txt">Mã phương tiện</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.MaPhuongTien)
+        </dt>
+
+        <dt>
+            <p class="txt">Tên phương tiện</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.TenPhuongTien)
+        </dt>
+
+        <dt>
+            <p class="txt">Giá tiền 1 đơn vị</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.GiaTien1DonVi)
+        </dt>
+
+        <dt>
+            <p class="txt">Ghi chú</p>
+        </dt>
+
+        <dt>
+            @Html.DisplayFor(model => model.GhiChu)
+        </dt>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaPhuongTien }, new { @class = "btn" })
+    @Html.ActionLink("Trở về", "ShowList", "", new { @class = "btn" })
+</p>
